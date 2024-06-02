@@ -1,11 +1,57 @@
 {% extends "base.html" %}
-
+{% load static %}
 
 {%block title %}
     My Blog
 {%endblock%}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{%static "blog/index.css" %}" />
+{% endblock %}
 
 {%block content %}
-    <h1>Welcome to my blog</h1>
+    <header id="main-navigation">
+        <h1>
+            <a href="">Giannis Blog</a>
+        </h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Gianis - The Author Of This Blog"/>
+            <h2>Giannis Blog</h2>
+        </header>
+        <p>Hi, I am Giannis and i love to talk about tech</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking"/>
+                        <div class="post_content">
+                            <h3>Mountain Hiking</h3>
+                            <p>Theres nothing like the views you get when hiking in the mountains</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+
+    </section>
+    <section id="about">
+        <h2>What i Do</h2>
+        <p>
+            I love programming, I love to help others and i enjoy exploring new technologies in general!
+        </p>
+        <p>
+            My goal is to keep on growing as a developer
+        </p>
+    </section>
+  
 {% endblock %}
