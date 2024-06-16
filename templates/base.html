@@ -15,7 +15,8 @@
             <a href="{% url "starting-page"%}">Giannis Blog</a>
         </h1>
         <nav>
-            <a href="{%url "posts-page"%}">All Posts</a>
+            <a href="{%url "read-later" %}">Stored Posts</a>
+            <a href="{%url "posts-page" %}">All Posts</a>
         </nav>
     </header>
     {% block content %}
